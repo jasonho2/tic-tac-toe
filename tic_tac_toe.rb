@@ -5,4 +5,17 @@ class TicTacToe
     @current_player = 'X'
   end
 
+  private
+
+  def display_board
+    puts "Current board:"
+    @board.each do |row|
+      puts row.join(' | ')
+      puts '-' * 9
+    end
+  end
+
 end
+
+# Start the game
+game = TicTacToe.new
